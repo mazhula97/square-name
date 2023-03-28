@@ -1,7 +1,7 @@
 import { LoaderContainer } from './styled';
 
 const Loader = () => {
-  return <LoaderContainer></LoaderContainer>;
+  return <LoaderContainer />;
 };
 
 export default Loader;

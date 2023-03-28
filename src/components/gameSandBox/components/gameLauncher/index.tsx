@@ -9,6 +9,7 @@ interface IProps {
 
 const GameLauncher = ({ startGame, isStarted }: IProps) => {
   const { isLoading, levels, selectedValue, handleLevelChange } = useGameLauncher(startGame);
+  const startGameHandler = () => startGame(true);
 
   return (
     <LaunchPanel>
@@ -17,13 +18,12 @@ const GameLauncher = ({ startGame, isStarted }: IProps) => {
         isLoading={isLoading}
         getOptionLabel={(level: ILevel) => level.name}
         getOptionValue={(level: ILevel) => level.field.toString()}
-        name="color"
         options={levels}
         placeholder="Level"
         onChange={handleLevelChange}
         value={selectedValue}
       />
-      <StartBtn disabled={isStarted} onClick={() => startGame(true)}>
+      <StartBtn disabled={isStarted} onClick={startGameHandler}>
         Start
       </StartBtn>
     </LaunchPanel>
