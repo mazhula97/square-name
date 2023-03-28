@@ -1,5 +1,6 @@
-import { ILevel } from './../types/game';
 import { useEffect, useState } from 'react';
+
+import { ILevel } from './../types/game';
 import GameService from '../service/gameService/GameService';
 
 export const useFetchingLevels = () => {

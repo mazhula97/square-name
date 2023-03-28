@@ -1,7 +1,5 @@
-import FilledCellList from '../../components/filedCellList';
-import GameSandBox from '../../components/gameSandBox';
-import { useFilledCells } from '../../hooks/useFilledCells';
 import { PageLayout } from './styled';
+import GameSandBox from '../../components/gameSandBox';
 
 const GamePage = () => {
   return (

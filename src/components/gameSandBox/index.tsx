@@ -1,5 +1,8 @@
 import { useState } from 'react';
+
 import { useFilledCells } from '../../hooks/useFilledCells';
+import { THEME } from '../../theme';
+import { CustomLabel } from '../common/boxes';
 import FilledCellList from '../filedCellList';
 import GameGrid from './components/gameGrid';
 import GameLauncher from './components/gameLauncher';
@@ -12,9 +15,13 @@ const GameSandBox = () => {
 
   return (
     <SandBoxLayout>
-      <GameLauncher startGame={setIsStarted} />
-      {isStarted ? <GameGrid handleSelectCell={handleSelectCell} /> : 'Choose your level'}
-      <FilledCellList filledCells={filledCells} />
+      <GameLauncher startGame={setIsStarted} isStarted={isStarted} />
+      {isStarted ? (
+        <GameGrid handleSelectCell={handleSelectCell} />
+      ) : (
+        <CustomLabel fontWeight={THEME.typography.fontWeight.bold}>Choose your level</CustomLabel>
+      )}
+      {isStarted && <FilledCellList filledCells={filledCells} />}
     </SandBoxLayout>
   );
 };

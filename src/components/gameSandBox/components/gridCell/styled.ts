@@ -11,6 +11,9 @@ const StyledGridCell = styled.div<{ isSelected: boolean }>`
   justify-content: center;
 
   background-color: ${({ isSelected }) => (isSelected ? THEME.palette.dark.primary.main : 'transparent')};
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export { StyledGridCell };

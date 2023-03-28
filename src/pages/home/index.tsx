@@ -1,5 +1,5 @@
-import { ROUTE } from '../../routes/constants';
 import { LaunchBtn, PageLayout } from './styled';
+import { ROUTE } from '../../routes/constants';
 
 const HomePage = () => {
   return (

@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+
 import { ErrorBoundaryLayout } from './styled';
 
 interface Props {

@@ -1,4 +1,5 @@
 import { memo } from 'react';
+
 import { THEME } from '../../theme';
 import { ICell } from '../../types/game';
 import { CustomLabel } from '../common/boxes';

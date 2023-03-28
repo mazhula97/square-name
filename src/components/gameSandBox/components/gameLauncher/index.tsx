@@ -3,11 +3,12 @@ import { ILevel } from '../../../../types/game';
 import { useGameLauncher } from '../../../../hooks/useGameLauncher';
 
 interface IProps {
+  isStarted: boolean;
   startGame: (value: boolean) => void;
 }
 
-const GameLauncher = ({ startGame }: IProps) => {
-  const { isLoading, levels, selectedValue, handleLevelChange } = useGameLauncher();
+const GameLauncher = ({ startGame, isStarted }: IProps) => {
+  const { isLoading, levels, selectedValue, handleLevelChange } = useGameLauncher(startGame);
 
   return (
     <LaunchPanel>
@@ -22,7 +23,9 @@ const GameLauncher = ({ startGame }: IProps) => {
         onChange={handleLevelChange}
         value={selectedValue}
       />
-      <StartBtn onClick={() => startGame(true)}>Start</StartBtn>
+      <StartBtn disabled={isStarted} onClick={() => startGame(true)}>
+        Start
+      </StartBtn>
     </LaunchPanel>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NumberParam, useQueryParam } from 'use-query-params';
+
 import { ICell } from '../../../../types/game';
 import GridCell from '../gridCell';
 import { GridRow, GridTemplate } from './styled';

@@ -1,7 +1,10 @@
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import GamePage from '../pages/game';
-import HomePage from '../pages/home';
-import NotFoundPage from '../pages/notFound';
+
+const GamePage = lazy(() => import('../pages/game'));
+const HomePage = lazy(() => import('../pages/home'));
+const NotFoundPage = lazy(() => import('../pages/notFound'));
+
 import { ROUTE } from './constants';
 
 const AppRoutes = () => {

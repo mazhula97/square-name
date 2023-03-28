@@ -40,7 +40,7 @@ const VerticalBox = styled.div<{
 const CustomLabel = styled.div<{
   color?: string;
   fontSize?: string | number;
-  fontWeight?: string;
+  fontWeight?: string | number;
 }>`
   font-size: ${({ fontSize }) => (fontSize ? fontSize : '14px')};
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 400)};
