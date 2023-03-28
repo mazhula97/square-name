@@ -12,6 +12,7 @@ const LaunchPanel = styled.div`
 
 const StyledSelect = styled(Select<ILevel>)`
   width: calc(100% - 110px);
+  min-width: 115px;
 `;
 
 const StartBtn = styled.button`
