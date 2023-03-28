@@ -1,4 +1,4 @@
-# square-name
+# Square Game
 
 This is a simple game created with CRA.
 
